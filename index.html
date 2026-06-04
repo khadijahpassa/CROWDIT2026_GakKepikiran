@@ -5,22 +5,300 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentora</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/logo-mentora.svg" type="image/x-icon" />
+
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-white py-3">
-        <div class="container">
-            <a class="navbar-brand font-heading text-primary-custom" href="#">Mentora</a>
-            </div>
-    </nav>
+<nav class="navbar navbar-expand-lg floating-navbar">
+    <div class="container">
 
-    <section class="py-5 text-center">
-    </section>
+        <!-- Logo -->
+        <a class="navbar-brand" href="/">
+            <img src="img/logo-mentora.svg" alt="Mentora" class="logo">
+            Mentora
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="cv-builder.html">CV Builder</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="ai-interview.html">
+                        AI Interview
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="quiz.html">
+                        Tes Minat
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="webinar.html">
+                        Webinar
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="navbar-action">
+                <a href="#" class="btn btn-register">
+                    Daftar Sekarang
+                </a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section">
+
+    <div class="hero-background"></div>
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="star star-left">
+                <svg width="94" height="93" viewBox="0 0 94 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M46.7783 0L52.9837 30.4508L77.3107 11.1129L62.491 38.4283L93.5567 39.2517L64.6461 50.6506L87.9145 71.25L58.4407 61.3986L63.0243 92.1354L46.7783 65.6434L30.5324 92.1354L35.116 61.3986L5.64211 71.25L28.9106 50.6506L-4.95911e-05 39.2517L31.0657 38.4283L16.2459 11.1129L40.5729 30.4508L46.7783 0Z" fill="#7560E2"/>
+                </svg>
+            </div>
+
+            <div class="star star-right">
+                <svg width="94" height="93" viewBox="0 0 94 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M46.7783 0L52.9837 30.4508L77.3107 11.1129L62.491 38.4283L93.5567 39.2517L64.6461 50.6506L87.9145 71.25L58.4407 61.3986L63.0243 92.1354L46.7783 65.6434L30.5324 92.1354L35.116 61.3986L5.64211 71.25L28.9106 50.6506L-4.95911e-05 39.2517L31.0657 38.4283L16.2459 11.1129L40.5729 30.4508L46.7783 0Z" fill="#7560E2"/>
+                </svg>
+
+            </div>
+
+            <h2>#LangkahAwalKarierMu</h2>
+
+            <h1>
+                Siap Kerja dan Bersaing Sejak Lulus Sekolah
+            </h1>
+
+            <p>
+                Mentora bantu anak SMA & SMK temukan potensi terbaik, merangkai CV profesional, 
+                hingga latihan interview dengan AI. Cari kerja atau magang jadi jauh lebih terarah!
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary-custom">
+                    Daftar Sekarang
+                </a>
+
+                <a href="#" class="btn btn-outline-custom">
+                    Learn More
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-gallery">
+
+            <div class="side-card">
+                <img src="img/hero-left.png" alt="">
+            </div>
+
+            <div class="center-card">
+                <img src="img/hero-middle.png" alt="">
+            </div>
+
+            <div class="side-card">
+                <img src="img/hero-right.png" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- STATS -->
+  <section class="trust" id="trust-stats">
+    <div class="trust-text">
+      <h3>Dipercaya <br /><strong>Ratusan Sekolah</strong></h3>
+    </div>
+
+    <div class="trust-stats">
+      <div class="stat-box">
+        <h3><span class="count" data-target="90">0</span>K+</h3>
+        <p>Pelajar join</p>
+      </div>
+      <div class="stat-box">
+        <h3><span class="count" data-target="500">0</span>+</h3>
+        <p>Partner siap rekrut</p>
+      </div>
+      <div class="stat-box">
+        <h3><span class="count" data-target="1200">0</span>+</h3>
+        <p>Lowongan aktif</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section">
+    <div class="container">
+
+        <div class="section-header">
+            <span class="section-badge">
+                Kenalan dengan Mentora
+            </span>
+
+            <h2>Jembatan Karier Impianmu</h2>
+
+            <p>
+                Mentora adalah platform persiapan karier digital yang dirancang khusus untuk anak SMA dan SMK. Kami percaya, sukses di dunia kerja gak harus nunggu kuliah dulu. Bersama Mentora, kamu bisa curi start sejak dini!
+            </p>
+        </div>
+
+        <div class="about-grid">
+
+            <!-- Left -->
+            <div class="about-image">
+                <!-- https://unsplash.com/photos/two-women-talking-while-looking-at-laptop-computer-7okkFhxrxNw -->
+                <img src="img/about-left.png" alt="Pelajar diskusi karier dengan Mentora">
+            </div>
+
+            <!-- Middle -->
+            <div class="about-center">
+
+                <div class="info-card vision-card">
+
+                    <span class="card-badge">
+                        VISI
+                    </span>
+
+                    <p>
+                        Membuka akses persiapan karier yang mudah, modern, dan terjangkau bagi seluruh pelajar di Indonesia.
+                    </p>
+
+                </div>
+
+                <div class="info-card mission-card">
+
+                    <span class="card-badge">
+                        MISI
+                    </span>
+
+                    <p>
+                        Membantu memetakan minat bakat, meningkatkan kesiapan kerja lewat simulasi AI, serta menghubungkan talenta muda berbakat langsung dengan industri.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Right -->
+            <div class="about-image">
+                <!-- https://unsplash.com/photos/person-using-laptop-EUg3mLMKfbo -->
+                <img src="img/about-right.png" alt="Persiapan kerja dan pelatihan skill Mentora">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+  <!-- FITUR -->
+  <section id="fitur" class="container-fluid py-5">
+    <h2 class="title text-center mb-5">Fitur <span class="highlight">Mentora</span></h2>
+
+    <div class="row justify-content-center gap-3 gap-md-0">
+      <!-- Left Cards -->
+      <div
+        class="col-md-12 col-lg-3 d-flex flex-column flex-md-row flex-lg-column gap-3 gap-lg-0 justify-content-between order-2 order-lg-1">
+        <a href="quiz.html" class="card-fitur-link">
+          <div class="card-fitur my-md-3">
+            <div class="card-icon">
+              <i class="bx bx-compass"></i>
+            </div>
+            <h3>Cari Minatmu!</h3>
+            <p>Temukan passion yang Kamu suka</p>
+          </div>
+        </a>
+        <a href="cv-builder.html" class="card-fitur-link">
+          <div class="card-fitur my-md-3">
+            <div class="card-icon">
+              <i class='bx bx-book-content'></i>
+            </div>
+            <h3>Build CV</h3>
+            <p>Buat CV profesional dengan mudah</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Phone -->
+      <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center order-1 order-lg-2">
+        <div class="phone-wrapper">
+          <img src="img/tanda-tanya.png" alt="Background" class="bg-question" />
+          <div class="phone-content">
+            <video class="phone-video" autoplay muted loop playsinline>
+              <source src="videos/demo-sikerir.mp4" type="video/mp4" />
+              Browser Kamu tidak support video tag.
+            </video>
+            <img src="img/phone.png" alt="Phone" class="phone-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Cards -->
+      <div
+        class="col-md-12 col-lg-3 d-flex flex-column flex-md-row flex-lg-column gap-3 gap-lg-0 justify-content-between order-3 order-lg-3">
+        <a href="webinar.html" class="card-fitur-link">
+          <div class="card-fitur my-md-3">
+            <div class="card-icon">
+              <i class="bx bx-slideshow"></i>
+            </div>
+            <h3>Webinar</h3>
+            <p>Belajar skill baru dari mentor</p>
+          </div>
+        </a>
+        <a href="#karir" class="card-fitur-link">
+          <div class="card-fitur my-md-3">
+            <div class="card-icon">
+                <i class="bx bx-microphone"></i>
+            </div>
+            <h3>AI Interview</h3>
+            <p>Simulasi wawancara kerja dengan AI</p>
+          </div>
+        </a>
+      </div>
+  </section>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
