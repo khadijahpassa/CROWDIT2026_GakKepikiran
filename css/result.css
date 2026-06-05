@@ -1,0 +1,387 @@
+/* =========================
+   GLOBAL
+========================= */
+
+
+:root {
+    --primary-color: #7560E2;    /* Ungu utama */
+    --primary-light: #8E85F3;    /* Versi lebih terang untuk hover */
+    --secondary-color: #4BB3E9;  /* Biru cyan */
+    --bg-light: #ECFAFD;        /* Background  */
+    --text-dark: #1E1E1E;       /* Warna font heading/hitam */
+    --text-muted: #64748B;      /* Warna font deskripsi/abu */
+    --white: #FFFFFF;
+
+    /* Typography */
+    --font-main: 'Plus Jakarta Sans', sans-serif;
+    --font-heading: 'Sora', sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+
+    padding:24px;
+
+    font-family:var(--font-main);
+    color:var(--text-dark);
+
+    background:linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--primary-light)
+    );
+
+    position:relative;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+/* =========================
+   BACKGROUND SHAPES
+========================= */
+
+.bg-shape{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    pointer-events:none;
+}
+
+.shape-1{
+    width:450px;
+    height:450px;
+    top:-180px;
+    left:-180px;
+}
+
+.shape-2{
+    width:250px;
+    height:250px;
+    top:80px;
+    right:-80px;
+}
+
+.shape-3{
+    width:380px;
+    height:380px;
+    bottom:-180px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* =========================
+   WRAPPER
+========================= */
+
+.wrapper{
+    width:100%;
+    max-width:800px;
+    position:relative;
+    z-index:2;
+}
+
+.main-card{
+    background:var(--white);
+
+    border-radius:36px;
+    padding:40px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.15);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.badge-top{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    background:rgba(117,96,226,.12);
+    color:var(--primary-color);
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.title{
+    font-family:var(--font-heading);
+
+    font-size:2rem;
+    font-weight:800;
+
+    margin-bottom:10px;
+
+    color:var(--text-dark);
+}
+
+.subtitle{
+    color:var(--text-muted);
+    margin-bottom:30px;
+}
+
+/* =========================
+   SCORE
+========================= */
+
+.score-box{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.score-number{
+    font-size:80px;
+    font-weight:800;
+
+    color:var(--primary-color);
+
+    line-height:1;
+
+    transform:scale(.8);
+
+    animation:
+        scorePop .8s ease forwards;
+}
+
+.score-label{
+    font-weight:700;
+    color:var(--text-muted);
+}
+
+/* =========================
+   METRICS
+========================= */
+
+.metric{
+    margin-bottom:22px;
+}
+
+.metric-head{
+    display:flex;
+    justify-content:space-between;
+
+    font-weight:700;
+    margin-bottom:8px;
+
+    color:var(--text-dark);
+}
+
+.progress{
+    height:14px;
+
+    background:#ECEFF5;
+
+    border-radius:999px;
+    overflow:hidden;
+}
+
+
+
+.progress-bar{
+    width:0;
+    height:100%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--primary-light)
+    );
+
+    border-radius:999px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:
+        width 1.2s cubic-bezier(.22,1,.36,1);
+}
+
+.progress-bar::after{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.6),
+        transparent
+    );
+
+    animation:
+        shimmer 2s infinite;
+}
+
+/* =========================
+   RECOMMENDATIONS
+========================= */
+
+.recommendation-box{
+    background:#F8F8FC;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    margin-top:30px;
+}
+
+.recommendation-box h5{
+    font-weight:700;
+    margin-bottom:15px;
+
+    color:var(--text-dark);
+}
+
+.recommendation-box h5 i{
+    color:var(--primary-color);
+}
+
+.recommendation-box ul{
+    padding-left:0;
+    list-style:none;
+}
+
+.recommendation-box li{
+    padding:6px 0;
+    color:#4B5563;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.review-btn{
+    width:100%;
+    height:70px;
+
+    border:none;
+
+    border-radius:22px;
+
+    margin-top:25px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--primary-light)
+    );
+
+    color:white;
+
+    font-weight:700;
+    font-size:18px;
+
+    transition:.25s;
+}
+
+.review-btn:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 15px 35px rgba(117,96,226,.30);
+}
+
+.review-btn i{
+    margin-right:8px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    body{
+        overflow:auto;
+    }
+
+    .main-card{
+        padding:28px;
+    }
+
+    .title{
+        font-size:1.8rem;
+    }
+
+    .score-number{
+        font-size:64px;
+    }
+
+    .review-btn{
+        height:60px;
+        font-size:16px;
+    }
+}
+
+@media(max-width:480px){
+
+    body{
+        padding:16px;
+    }
+
+    .main-card{
+        padding:22px;
+        border-radius:28px;
+    }
+
+    .title{
+        font-size:1.5rem;
+    }
+
+    .score-number{
+        font-size:56px;
+    }
+
+    .metric-head{
+        font-size:14px;
+    }
+}
+
+@keyframes shimmer{
+
+    100%{
+        left:150%;
+    }
+
+}
+
+@keyframes scorePop{
+
+    0%{
+        opacity:0;
+        transform:scale(.6);
+    }
+
+    60%{
+        transform:scale(1.1);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}

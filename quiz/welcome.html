@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interview Session</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+<link rel="stylesheet" href="../css/welcome.css">
+
+  </head>
+
+  <body>
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <div class="wrapper">
+      <div class="main-card">
+        <div class="text-center">
+          <div class="badge-top">
+            <i class="bi bi-robot"></i>
+            AI Interview Simulator
+          </div>
+
+          <h1 class="title">Good Morning, Nisa 👋</h1>
+
+          <p class="subtitle">
+            Practice real interviews and get
+            <span>instant AI feedback</span>
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <label class="section-label"> Position Applied </label>
+
+          <div class="dropdown">
+            <button
+              class="position-btn dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+            >
+              <div class="d-flex align-items-center gap-3">
+                <div class="position-icon">
+                  <i class="bi bi-briefcase-fill"></i>
+                </div>
+
+                <span id="selectedPosition"> Frontend Developer </span>
+              </div>
+            </button>
+
+            <ul class="dropdown-menu custom-menu">
+              <li>
+                <a class="dropdown-item position-item active-role" href="#">
+                  <i class="bi bi-code-slash"></i>
+                  Frontend Developer
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item position-item" href="#">
+                  <i class="bi bi-database"></i>
+                  Backend Developer
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item position-item" href="#">
+                  <i class="bi bi-palette-fill"></i>
+                  UI/UX Designer
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item position-item" href="#">
+                  <i class="bi bi-phone-fill"></i>
+                  Mobile Developer
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="difficulty-grid">
+          <div class="difficulty-card active" data-level="Basic">
+            <div class="difficulty-icon">
+              <i class="bi bi-stars"></i>
+            </div>
+
+            <h5>Basic</h5>
+
+            <span>10 Minutes</span>
+          </div>
+
+          <div class="difficulty-card" data-level="Intermediate">
+            <div class="difficulty-icon">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+
+            <h5>Intermediate</h5>
+
+            <span>15 Minutes</span>
+          </div>
+
+          <div class="difficulty-card" data-level="Hard">
+            <div class="difficulty-icon">
+              <i class="bi bi-lightning-charge-fill"></i>
+            </div>
+
+            <h5>Hard</h5>
+
+            <span>20 Minutes</span>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat-pill">
+            <i class="bi bi-clock-history"></i>
+            20 Questions
+          </div>
+
+          <div class="stat-pill">
+            <i class="bi bi-mic-fill"></i>
+            Voice Answer
+          </div>
+
+          <div class="stat-pill">
+            <i class="bi bi-award-fill"></i>
+            AI Feedback
+          </div>
+        </div>
+
+        <button class="start-btn" onclick="startInterview()">
+          <i class="bi bi-play-fill"></i>
+          Start Interview
+        </button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      let selectedLevel = "Basic";
+      let selectedPosition = "Frontend Developer";
+
+      const cards = document.querySelectorAll(".difficulty-card");
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          cards.forEach((c) => c.classList.remove("active"));
+
+          card.classList.add("active");
+
+          selectedLevel = card.dataset.level;
+        });
+      });
+
+      document.querySelectorAll(".position-item").forEach((item) => {
+        item.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          document
+            .querySelectorAll(".position-item")
+            .forEach((x) => x.classList.remove("active-role"));
+
+          item.classList.add("active-role");
+
+          selectedPosition = item.textContent.trim();
+
+          document.getElementById("selectedPosition").textContent =
+            selectedPosition;
+        });
+      });
+
+      function startInterview() {
+        localStorage.setItem("position", selectedPosition);
+
+        localStorage.setItem("level", selectedLevel);
+
+        window.location.href = "quiz.html";
+      }
+    </script>
+  </body>
+</html>
