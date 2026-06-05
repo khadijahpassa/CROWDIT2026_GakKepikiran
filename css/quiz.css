@@ -1,0 +1,324 @@
+/* =========================
+   ROOT FROM GLOBAL CSS
+========================= */
+
+:root {
+    --primary-color: #7560E2;
+    --primary-light: #8E85F3;
+    --secondary-color: #4BB3E9;
+    --bg-light: #ECFAFD;
+    --text-dark: #1E1E1E;
+    --text-muted: #64748B;
+    --white: #FFFFFF;
+
+    --font-main: 'Plus Jakarta Sans', sans-serif;
+    --font-heading: 'Sora', sans-serif;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:var(--font-main);
+    color:var(--text-dark);
+
+    background:linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--primary-light)
+    );
+
+    position:relative;
+    padding:24px;
+}
+
+/* =========================
+   BACKGROUND SHAPES
+========================= */
+
+.bg-shape{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    pointer-events:none;
+}
+
+.shape-1{
+    width:450px;
+    height:450px;
+    top:-180px;
+    left:-180px;
+}
+
+.shape-2{
+    width:250px;
+    height:250px;
+    top:80px;
+    right:-80px;
+}
+
+.shape-3{
+    width:380px;
+    height:380px;
+    bottom:-180px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* =========================
+   WRAPPER
+========================= */
+
+.wrapper{
+    width:100%;
+    max-width:900px;
+    position:relative;
+    z-index:2;
+}
+
+.main-card{
+    background:var(--white);
+
+    border-radius:36px;
+    padding:40px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.15);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.badge-top{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    background:rgba(117,96,226,.12);
+    color:var(--primary-color);
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-size:14px;
+    font-weight:700;
+
+    margin-bottom:20px;
+}
+
+.title{
+    font-family:var(--font-heading);
+
+    font-size:2rem;
+    font-weight:800;
+
+    color:var(--text-dark);
+}
+
+.meta{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:10px;
+    margin-top:16px;
+}
+
+.meta-pill{
+    background:#F5F7FB;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-weight:600;
+    color:var(--text-muted);
+}
+
+/* =========================
+   QUESTION
+========================= */
+
+.question-card{
+    background:#F8F8FC;
+
+    border-radius:24px;
+
+    padding:24px;
+
+    margin-top:30px;
+}
+
+.question-label{
+    font-size:14px;
+    font-weight:700;
+
+    color:var(--primary-color);
+
+    margin-bottom:10px;
+}
+
+.question-text{
+    font-size:1.25rem;
+    font-weight:700;
+
+    color:var(--text-dark);
+}
+
+/* =========================
+   ANSWER
+========================= */
+
+.answer-card{
+    background:#F8F8FC;
+
+    border-radius:24px;
+
+    padding:24px;
+
+    margin-top:18px;
+
+    min-height:180px;
+}
+
+.answer-label{
+    font-size:14px;
+    font-weight:700;
+
+    color:var(--primary-color);
+
+    margin-bottom:12px;
+}
+
+#transcript{
+    color:#374151;
+    line-height:1.8;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.controls{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+
+    margin-top:20px;
+}
+
+.btn-custom{
+    flex:1;
+    min-width:180px;
+
+    height:60px;
+
+    border:none;
+    border-radius:18px;
+
+    color:white;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.btn-custom:hover{
+    transform:translateY(-2px);
+}
+
+.record{
+    background:var(--primary-color);
+}
+
+.record:hover{
+    box-shadow:
+        0 15px 35px rgba(117,96,226,.30);
+}
+
+.stop{
+    background:#F59E0B;
+}
+
+.stop:hover{
+    box-shadow:
+        0 15px 35px rgba(245,158,11,.25);
+}
+
+.next{
+    background:#10B981;
+}
+
+.next:hover{
+    box-shadow:
+        0 15px 35px rgba(16,185,129,.25);
+}
+
+/* =========================
+   AUDIO
+========================= */
+
+audio{
+    border-radius:16px;
+}
+
+audio::-webkit-media-controls-panel{
+    background:#F5F7FB;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.status{
+    text-align:center;
+
+    margin-top:20px;
+
+    font-weight:600;
+
+    color:#6B7280;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    body{
+        overflow:auto;
+    }
+
+    .main-card{
+        padding:28px;
+    }
+
+    .controls{
+        flex-direction:column;
+    }
+
+    .btn-custom{
+        width:100%;
+    }
+
+    .title{
+        font-size:1.7rem;
+    }
+}
