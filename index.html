@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,298 +11,629 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <!-- Boxicons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Sora:wght@600;700;800&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tes.css" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/logo-mentora.svg" type="image/x-icon" />
 
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg floating-navbar">
-    <div class="container">
+    <nav class="navbar navbar-expand-lg floating-navbar">
+        <div class="container">
 
-        <!-- Logo -->
-        <a class="navbar-brand" href="/">
-            <img src="img/logo-mentora.svg" alt="Mentora" class="logo">
-            Mentora
-        </a>
+            <!-- Logo -->
+            <a class="navbar-brand" href="/">
+                <img src="img/logo-mentora.svg" alt="Mentora" class="logo">
+                Mentora
+            </a>
 
-        <!-- Mobile Toggle -->
-        <button
-            class="navbar-toggler border-0 shadow-none"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNavbar"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- Menu -->
-        <div class="collapse navbar-collapse" id="mainNavbar">
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
 
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
-                </li>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="cv-builder.html">CV Builder</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cv-builder.html">CV Builder</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="quiz/welcome.html">
-                        AI Interview
+                    <li class="nav-item">
+                        <a class="nav-link" href="quiz/welcome.html">
+                            AI Interview
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="interest-test.html">
+                            Tes Minat
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="webinar.html">
+                            Webinar
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="navbar-action">
+                    <a href="#" class="btn btn-register">
+                        Daftar Sekarang
                     </a>
-                </li>
+                </div>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="interest-test.html">
-                        Tes Minat
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="webinar.html">
-                        Webinar
-                    </a>
-                </li>
-
-            </ul>
-
-            <div class="navbar-action">
-                <a href="#" class="btn btn-register">
-                    Daftar Sekarang
-                </a>
             </div>
-
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- HERO -->
-<section class="hero-section">
+    <!-- HERO -->
+    <section class="hero-section">
 
-    <div class="hero-background"></div>
+        <div class="hero-background"></div>
 
-    <div class="container">
+        <div class="container">
 
-        <div class="hero-content">
+            <div class="hero-content">
 
-            <div class="star star-left">
-                <svg width="94" height="93" viewBox="0 0 94 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M46.7783 0L52.9837 30.4508L77.3107 11.1129L62.491 38.4283L93.5567 39.2517L64.6461 50.6506L87.9145 71.25L58.4407 61.3986L63.0243 92.1354L46.7783 65.6434L30.5324 92.1354L35.116 61.3986L5.64211 71.25L28.9106 50.6506L-4.95911e-05 39.2517L31.0657 38.4283L16.2459 11.1129L40.5729 30.4508L46.7783 0Z" fill="#7560E2"/>
-                </svg>
-            </div>
+                <div class="star star-left">
+                    <svg width="94" height="93" viewBox="0 0 94 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M46.7783 0L52.9837 30.4508L77.3107 11.1129L62.491 38.4283L93.5567 39.2517L64.6461 50.6506L87.9145 71.25L58.4407 61.3986L63.0243 92.1354L46.7783 65.6434L30.5324 92.1354L35.116 61.3986L5.64211 71.25L28.9106 50.6506L-4.95911e-05 39.2517L31.0657 38.4283L16.2459 11.1129L40.5729 30.4508L46.7783 0Z"
+                            fill="#7560E2" />
+                    </svg>
+                </div>
 
-            <div class="star star-right">
-                <svg width="94" height="93" viewBox="0 0 94 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M46.7783 0L52.9837 30.4508L77.3107 11.1129L62.491 38.4283L93.5567 39.2517L64.6461 50.6506L87.9145 71.25L58.4407 61.3986L63.0243 92.1354L46.7783 65.6434L30.5324 92.1354L35.116 61.3986L5.64211 71.25L28.9106 50.6506L-4.95911e-05 39.2517L31.0657 38.4283L16.2459 11.1129L40.5729 30.4508L46.7783 0Z" fill="#7560E2"/>
-                </svg>
-
-            </div>
-
-            <h2>#LangkahAwalKarierMu</h2>
-
-            <h1>
-                Siap Kerja dan Bersaing Sejak Lulus Sekolah
-            </h1>
-
-            <p>
-                Mentora bantu anak SMA & SMK temukan potensi terbaik, merangkai CV profesional, 
-                hingga latihan interview dengan AI. Cari kerja atau magang jadi jauh lebih terarah!
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#" class="btn btn-primary-custom">
-                    Daftar Sekarang
-                </a>
-
-                <a href="#" class="btn btn-outline-custom">
-                    Learn More
-                </a>
-            </div>
-
-        </div>
-
-        <div class="hero-gallery">
-
-            <div class="side-card">
-                <img src="img/hero-left.png" alt="">
-            </div>
-
-            <div class="center-card">
-                <img src="img/hero-middle.png" alt="">
-            </div>
-
-            <div class="side-card">
-                <img src="img/hero-right.png" alt="">
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-  <!-- STATS -->
-  <section class="trust" id="trust-stats">
-    <div class="trust-text">
-      <h3>Dipercaya <br /><strong>Ratusan Sekolah</strong></h3>
-    </div>
-
-    <div class="trust-stats">
-      <div class="stat-box">
-        <h3><span class="count" data-target="90">0</span>K+</h3>
-        <p>Pelajar join</p>
-      </div>
-      <div class="stat-box">
-        <h3><span class="count" data-target="500">0</span>+</h3>
-        <p>Partner siap rekrut</p>
-      </div>
-      <div class="stat-box">
-        <h3><span class="count" data-target="1200">0</span>+</h3>
-        <p>Lowongan aktif</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about-section">
-    <div class="container">
-
-        <div class="section-header">
-            <span class="section-badge">
-                Kenalan dengan Mentora
-            </span>
-
-            <h2>Jembatan Karier Impianmu</h2>
-
-            <p>
-                Mentora adalah platform persiapan karier digital yang dirancang khusus untuk anak SMA dan SMK. Kami percaya, sukses di dunia kerja gak harus nunggu kuliah dulu. Bersama Mentora, kamu bisa curi start sejak dini!
-            </p>
-        </div>
-
-        <div class="about-grid">
-
-            <!-- Left -->
-            <div class="about-image">
-                <!-- https://unsplash.com/photos/two-women-talking-while-looking-at-laptop-computer-7okkFhxrxNw -->
-                <img src="img/about-left.png" alt="Pelajar diskusi karier dengan Mentora">
-            </div>
-
-            <!-- Middle -->
-            <div class="about-center">
-
-                <div class="info-card vision-card">
-
-                    <span class="card-badge">
-                        VISI
-                    </span>
-
-                    <p>
-                        Membuka akses persiapan karier yang mudah, modern, dan terjangkau bagi seluruh pelajar di Indonesia.
-                    </p>
+                <div class="star star-right">
+                    <svg width="94" height="93" viewBox="0 0 94 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M46.7783 0L52.9837 30.4508L77.3107 11.1129L62.491 38.4283L93.5567 39.2517L64.6461 50.6506L87.9145 71.25L58.4407 61.3986L63.0243 92.1354L46.7783 65.6434L30.5324 92.1354L35.116 61.3986L5.64211 71.25L28.9106 50.6506L-4.95911e-05 39.2517L31.0657 38.4283L16.2459 11.1129L40.5729 30.4508L46.7783 0Z"
+                            fill="#7560E2" />
+                    </svg>
 
                 </div>
 
-                <div class="info-card mission-card">
+                <h2>#LangkahAwalKarierMu</h2>
 
-                    <span class="card-badge">
-                        MISI
-                    </span>
+                <h1>
+                    Siap Kerja dan Bersaing Sejak Lulus Sekolah
+                </h1>
 
-                    <p>
-                        Membantu memetakan minat bakat, meningkatkan kesiapan kerja lewat simulasi AI, serta menghubungkan talenta muda berbakat langsung dengan industri.
-                    </p>
+                <p>
+                    Mentora bantu anak SMA & SMK temukan potensi terbaik, merangkai CV profesional,
+                    hingga latihan interview dengan AI. Cari kerja atau magang jadi jauh lebih terarah!
+                </p>
 
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary-custom">
+                        Daftar Sekarang
+                    </a>
+
+                    <a href="#" class="btn btn-outline-custom">
+                        Learn More
+                    </a>
                 </div>
 
             </div>
 
-            <!-- Right -->
-            <div class="about-image">
-                <!-- https://unsplash.com/photos/person-using-laptop-EUg3mLMKfbo -->
-                <img src="img/about-right.png" alt="Persiapan kerja dan pelatihan skill Mentora">
+            <div class="hero-gallery">
+
+                <div class="side-card">
+                    <img src="img/hero-left.png" alt="">
+                </div>
+
+                <div class="center-card">
+                    <img src="img/hero-middle.png" alt="">
+                </div>
+
+                <div class="side-card">
+                    <img src="img/hero-right.png" alt="">
+                </div>
+
             </div>
 
         </div>
 
-    </div>
-</section>
+    </section>
 
-  <!-- FITUR -->
-  <section id="fitur" class="container-fluid py-5">
-    <h2 class="title text-center mb-5">Fitur <span class="highlight">Mentora</span></h2>
-
-    <div class="row justify-content-center gap-3 gap-md-0">
-      <!-- Left Cards -->
-      <div
-        class="col-md-12 col-lg-3 d-flex flex-column flex-md-row flex-lg-column gap-3 gap-lg-0 justify-content-between order-2 order-lg-1">
-        <a href="quiz.html" class="card-fitur-link">
-          <div class="card-fitur my-md-3">
-            <div class="card-icon">
-              <i class="bx bx-compass"></i>
-            </div>
-            <h3>Cari Minatmu!</h3>
-            <p>Temukan passion yang Kamu suka</p>
-          </div>
-        </a>
-        <a href="cv-builder.html" class="card-fitur-link">
-          <div class="card-fitur my-md-3">
-            <div class="card-icon">
-              <i class='bx bx-book-content'></i>
-            </div>
-            <h3>Build CV</h3>
-            <p>Buat CV profesional dengan mudah</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Phone -->
-      <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center order-1 order-lg-2">
-        <div class="phone-wrapper">
-          <img src="img/tanda-tanya.png" alt="Background" class="bg-question" />
-          <div class="phone-content">
-            <video class="phone-video" autoplay muted loop playsinline>
-              <source src="videos/demo-sikerir.mp4" type="video/mp4" />
-              Browser Kamu tidak support video tag.
-            </video>
-            <img src="img/phone.png" alt="Phone" class="phone-img" />
-          </div>
+    <!-- STATS -->
+    <section class="trust" id="trust-stats">
+        <div class="trust-text">
+            <h3>Dipercaya <br /><strong>Ratusan Sekolah</strong></h3>
         </div>
-      </div>
 
-      <!-- Right Cards -->
-      <div
-        class="col-md-12 col-lg-3 d-flex flex-column flex-md-row flex-lg-column gap-3 gap-lg-0 justify-content-between order-3 order-lg-3">
-        <a href="webinar.html" class="card-fitur-link">
-          <div class="card-fitur my-md-3">
-            <div class="card-icon">
-              <i class="bx bx-slideshow"></i>
+        <div class="trust-stats">
+            <div class="stat-box">
+                <h3><span class="count" data-target="90">0</span>K+</h3>
+                <p>Pelajar join</p>
             </div>
-            <h3>Webinar</h3>
-            <p>Belajar skill baru dari mentor</p>
-          </div>
-        </a>
-        <a href="#karir" class="card-fitur-link">
-          <div class="card-fitur my-md-3">
-            <div class="card-icon">
-                <i class="bx bx-microphone"></i>
+            <div class="stat-box">
+                <h3><span class="count" data-target="500">0</span>+</h3>
+                <p>Partner siap rekrut</p>
             </div>
-            <h3>AI Interview</h3>
-            <p>Simulasi wawancara kerja dengan AI</p>
-          </div>
-        </a>
-      </div>
-  </section>
+            <div class="stat-box">
+                <h3><span class="count" data-target="1200">0</span>+</h3>
+                <p>Lowongan aktif</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section">
+        <div class="container">
+
+            <div class="section-header">
+                <span class="section-badge">
+                    Kenalan dengan Mentora
+                </span>
+
+                <h2>Jembatan Karier Impianmu</h2>
+
+                <p>
+                    Mentora adalah platform persiapan karier digital yang dirancang khusus untuk anak SMA dan SMK. Kami
+                    percaya, sukses di dunia kerja gak harus nunggu kuliah dulu. Bersama Mentora, kamu bisa curi start
+                    sejak dini!
+                </p>
+            </div>
+
+            <div class="about-grid">
+
+                <!-- Left -->
+                <div class="about-image">
+                    <!-- https://unsplash.com/photos/two-women-talking-while-looking-at-laptop-computer-7okkFhxrxNw -->
+                    <img src="img/about-left.png" alt="Pelajar diskusi karier dengan Mentora">
+                </div>
+
+                <!-- Middle -->
+                <div class="about-center">
+
+                    <div class="info-card vision-card">
+
+                        <span class="card-badge">
+                            VISI
+                        </span>
+
+                        <p>
+                            Membuka akses persiapan karier yang mudah, modern, dan terjangkau bagi seluruh pelajar di
+                            Indonesia.
+                        </p>
+
+                    </div>
+
+                    <div class="info-card mission-card">
+
+                        <span class="card-badge">
+                            MISI
+                        </span>
+
+                        <p>
+                            Membantu memetakan minat bakat, meningkatkan kesiapan kerja lewat simulasi AI, serta
+                            menghubungkan talenta muda berbakat langsung dengan industri.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Right -->
+                <div class="about-image">
+                    <!-- https://unsplash.com/photos/person-using-laptop-EUg3mLMKfbo -->
+                    <img src="img/about-right.png" alt="Persiapan kerja dan pelatihan skill Mentora">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FITUR -->
+    <section id="fitur" class="container-fluid py-5">
+        <h2 class="title text-center mb-5">Fitur <span class="highlight">Mentora</span></h2>
+
+        <div class="row justify-content-center gap-3 gap-md-0">
+            <!-- Left Cards -->
+            <div
+                class="col-md-12 col-lg-3 d-flex flex-column flex-md-row flex-lg-column gap-3 gap-lg-0 justify-content-between order-2 order-lg-1">
+                <a href="quiz.html" class="card-fitur-link">
+                    <div class="card-fitur my-md-3">
+                        <div class="card-icon">
+                            <i class="bx bx-compass"></i>
+                        </div>
+                        <h3>Cari Minatmu!</h3>
+                        <p>Temukan passion yang Kamu suka</p>
+                    </div>
+                </a>
+                <a href="cv-builder.html" class="card-fitur-link">
+                    <div class="card-fitur my-md-3">
+                        <div class="card-icon">
+                            <i class='bx bx-book-content'></i>
+                        </div>
+                        <h3>Build CV</h3>
+                        <p>Buat CV profesional dengan mudah</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Phone -->
+            <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center order-1 order-lg-2">
+                <div class="phone-wrapper">
+                    <img src="img/tanda-tanya.png" alt="Background" class="bg-question" />
+                    <div class="phone-content">
+                        <video class="phone-video" autoplay muted loop playsinline>
+                            <source src="videos/demo-sikerir.mp4" type="video/mp4" />
+                            Browser Kamu tidak support video tag.
+                        </video>
+                        <img src="img/phone.png" alt="Phone" class="phone-img" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Cards -->
+            <div
+                class="col-md-12 col-lg-3 d-flex flex-column flex-md-row flex-lg-column gap-3 gap-lg-0 justify-content-between order-3 order-lg-3">
+                <a href="webinar.html" class="card-fitur-link">
+                    <div class="card-fitur my-md-3">
+                        <div class="card-icon">
+                            <i class="bx bx-slideshow"></i>
+                        </div>
+                        <h3>Webinar</h3>
+                        <p>Belajar skill baru dari mentor</p>
+                    </div>
+                </a>
+                <a href="#karir" class="card-fitur-link">
+                    <div class="card-fitur my-md-3">
+                        <div class="card-icon">
+                            <i class="bx bx-microphone"></i>
+                        </div>
+                        <h3>AI Interview</h3>
+                        <p>Simulasi wawancara kerja dengan AI</p>
+                    </div>
+                </a>
+            </div>
+    </section>
+
+    <!-- KARIR -->
+    <section id="karir" class="position-relative">
+
+        <!-- Judul -->
+        <h2 class="title text-center">
+            Temukan karier yang paling sesuai untuk Kamu
+        </h2>
+        <p class="karir-content text-center w-75 light-grey mx-auto">
+            Sikerir menawarkan berbagai peluang yang sesuai dengan keterampilan dan
+            ambisi Kamu. Daftar hari ini dan ambil langkah berikutnya menuju karier
+            Impian. Masa depan Kamu dimulai di sini.
+        </p>
+
+        <!-- FORM FILTER -->
+        <div class="container mt-4">
+            <form class="bg-white p-3 rounded shadow-sm ">
+                <div class="row g-2 align-items-center text-center">
+                    <div class="col-12 col-md">
+                        <input type="text" class="form-control" placeholder="Posisi" />
+                    </div>
+
+                    <div class="col-12 col-md">
+                        <select class="form-select">
+                            <option selected>Perusahaan</option>
+                            <option>Astra Group</option>
+                            <option>Artist Inc</option>
+                            <option>GoTo</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-md">
+                        <select class="form-select">
+                            <option selected>Lokasi</option>
+                            <option>Jakarta</option>
+                            <option>Bandung</option>
+                            <option>Bali</option>
+                            <option>Semarang</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-md">
+                        <select class="form-select">
+                            <option selected>Jurusan</option>
+                            <option>Ekonomi</option>
+                            <option>Teknik</option>
+                            <option>Pariwisata</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-md">
+                        <select class="form-select">
+                            <option selected>Jenjang Pendidikan</option>
+                            <option>SMA/SMK</option>
+                            <option>S1</option>
+                            <option>S2</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-md-auto">
+                        <button type="submit"
+                            class="btn btn-dark w-100 w-md-auto d-flex align-items-center justify-content-center"
+                            style="border-radius: 5px; background-color: #7560E2; border: none;">
+                            <span class="me-2 d-md-none">Cari</span>
+                            <i class="bx bx-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
 
+        <!-- CARD -->
+        <div class="container mt-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Card 1 -->
+                <div class="col d-flex loker">
+                    <div class="card shadow-sm flex-fill rounded-4 border-0 p-3">
+                        <div class="card-body">
+                            <!-- Logo -->
+                            <div class="mb-4">
+                                <!-- Image Source : https://upload.wikimedia.org/wikipedia/commons/6/69/Logo_Baru_Pelindo_%282021%29.png -->
+                                <img src="images/pelindo-logo.png" alt="Pelindo Logo" style="height: 32px;" />
+                            </div>
+                            <!-- Perusahaan -->
+                            <h6 class="mb-2 light-grey">
+                                PT. Pelabuhan Indonesia (Persero)
+                            </h6>
+                            <!-- Posisi -->
+                            <h5 class="fw-bold mb-3">Front-End Developer</h5>
+                            <!-- Lokasi -->
+                            <p class="mb-2 light-grey">Kota Adm. Jakarta Utara</p>
+                            <!-- Posisi & Pelamar -->
+                            <p class="mb-3">
+                                <span class="primary-color">1 Posisi •</span>
+                                <span class="primary-color">25 Pelamar</span>
+                            </p>
+                            <!-- Badge -->
+                            <div class="mb-3">
+                                <span class="badge rounded-pill px-3 py-2 text-success border border-success mb-2"
+                                    style="background-color: #d1fadf">
+                                    Umum
+                                </span>
+                                <span
+                                    class="badge bg-secondary-subtle text-secondary border rounded-pill px-3 py-2 mb-2">2
+                                    Bulan</span>
+                                <span
+                                    class="badge bg-secondary-subtle text-secondary border rounded-pill px-3 py-2">Onsite</span>
+                            </div>
+                            <hr />
+                            <!-- Penutupan -->
+                            <p class="mb-2">
+                                Penutupan:
+                                <span class="text-danger">7 September 2025</span>
+                            </p>
+                            <!-- Tanggal dibuat -->
+                            <div class="d-flex align-items-center bg-light rounded p-2 mb-3">
+                                <i class="bi bi-calendar-event me-2"></i>
+                                <small class="text-muted">Dibuat 4 hari yang lalu</small>
+                            </div>
+                            <!-- Tombol -->
+                            <a href="#" class="btn btn-dark w-100 rounded-3"
+                                style="border-radius: 5px; background-color: #7560E2; border: none;">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col d-flex loker">
+                    <div class="card shadow-sm flex-fill rounded-4 border-0 p-3">
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <!-- Image Source : https://propertree.id/images/brand/logopropertree.png -->
+                                <img src="images/propertree logo.png" alt="Propertree Logo"
+                                    style="height: 32px; object-fit: contain; max-width: 100%;" />
+                            </div>
+                            <h6 class="light-grey mb-2">PT. Propertree Investa Cendekia</h6>
+                            <h5 class="fw-bold mb-3">Flutter Developer</h5>
+                            <p class="light-grey mb-2">Kota Adm. Jakarta Utara</p>
+                            <p class="mb-3">
+                                <span class="primary-color">1 Posisi •</span>
+                                <span class="primary-color">25 Pelamar</span>
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge rounded-pill px-3 py-2 text-success border border-success mb-2"
+                                    style="background-color: #d1fadf">
+                                    Umum
+                                </span>
+                                <span
+                                    class="badge bg-secondary-subtle text-secondary border rounded-pill px-3 py-2 mb-2">2
+                                    Bulan</span>
+                                <span
+                                    class="badge bg-secondary-subtle text-secondary border rounded-pill px-3 py-2">Onsite</span>
+                            </div>
+                            <hr />
+                            <p class="mb-2">
+                                Penutupan:
+                                <span class="text-danger">7 September 2025</span>
+                            </p>
+                            <div class="d-flex align-items-center bg-light rounded p-2 mb-3">
+                                <i class="bi bi-calendar-event me-2"></i>
+                                <small class="text-muted">Dibuat 4 hari yang lalu</small>
+                            </div>
+                            <a href="#" class="btn btn-dark w-100 rounded-3"
+                                style="border-radius: 5px; background-color: #7560E2; border: none;">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col d-flex loker">
+                    <div class="card shadow-sm flex-fill rounded-4 border-0 p-3">
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <!-- Image Source : https://upload.wikimedia.org/wikipedia/commons/2/2b/GoTo_logo.png -->
+                                <img src="images/goto logo.png" alt="GoTo Logo" style="height: 32px;" />
+                            </div>
+                            <h6 class="light-grey mb-2">PT. GoTo Group</h6>
+                            <h5 class="fw-bold mb-3">Fullstack Developer</h5>
+                            <p class="light-grey mb-2">Kota Adm. Jakarta Utara</p>
+                            <p class="mb-3">
+                                <span class="primary-color">1 Posisi •</span>
+                                <span class="primary-color">25 Pelamar</span>
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge rounded-pill px-3 py-2 text-success border border-success mb-2"
+                                    style="background-color: #d1fadf">
+                                    Umum
+                                </span>
+                                <span
+                                    class="badge bg-secondary-subtle text-secondary border rounded-pill px-3 py-2 mb-2">2
+                                    Bulan</span>
+                                <span
+                                    class="badge bg-secondary-subtle text-secondary border rounded-pill px-3 py-2">Onsite</span>
+                            </div>
+                            <hr />
+                            <p class="mb-2">
+                                Penutupan:
+                                <span class="text-danger">7 September 2025</span>
+                            </p>
+                            <div class="d-flex align-items-center bg-light rounded p-2 mb-3">
+                                <i class="bi bi-calendar-event me-2"></i>
+                                <small class="text-muted">Dibuat 4 hari yang lalu</small>
+                            </div>
+                            <a href="#" class="btn btn-dark w-100 rounded-3"
+                                style="border-radius: 5px; background-color: #7560E2; border: none;">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPONSOR  -->
+    <section id="sponsor">
+        <p class="karir-content text-center w-75 light-grey mx-auto mb-5">
+            Over <span>22,000 companies</span> partner with us for career
+            opportunities!
+        </p>
+
+        <!-- BRAND -->
+        <div class="container">
+            <div class="row text-center justify-content-center align-items-center gx-3 gy-3">
+                <!-- Baris pertama (4 logo) -->
+                <div class="col-6 col-md-3 mb-4">
+                    <!-- Image Source : https://id.wikipedia.org/wiki/Berkas:Ruangguru_logo.svg -->
+                    <img src="img/ruang-guru.png" class="img-fluid sponsor-logo" alt="Ruang Guru" />
+                </div>
+                <div class="col-6 col-md-3">
+                    <!-- Image Source : https://skilvul.com/partners/skilvul/ -->
+                    <img src="img/skilvul.png" class="img-fluid sponsor-logo" alt="Skilvul" />
+                </div>
+                <div class="col-6 col-md-3">
+                    <!-- Image Source : https://assets.techverse.asia/media/2023/12/14/jobstreet_logo.webp -->
+                    <img src="img/jobstreet.png" class="img-fluid sponsor-logo" alt="JobStreet" />
+                </div>
+                <div class="col-6 col-md-3">
+                    <!-- Image Source : https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/805d861f71c172ce260a247028cb0718.png -->
+                    <img src="img/glints.png" class="img-fluid sponsor-logo" alt="Glints" />
+                </div>
+
+                <!-- Baris kedua (4 logo) -->
+                <div class="col-6 col-md-3">
+                    <!-- Image Source : https://dicoding-assets.sgp1.cdn.digitaloceanspaces.com/blog/wp-content/uploads/2014/12/dicoding-header-logo.png -->
+                    <img src="img/dicoding.png" class="img-fluid sponsor-logo" alt="Dicoding" />
+                </div>
+                <div class="col-6 col-md-3">
+                    <!-- Image Source : https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/LinkedIn_2021.svg/2560px-LinkedIn_2021.svg.png -->
+                    <img src="img/linkedin.png" class="img-fluid sponsor-linkedin" alt="LinkedIn" />
+                </div>
+                <div class="col-6 col-md-3">
+                    <!-- Image Source : https://cdn.sejutacita.id/63e0c23d8c574700140623a5/JobPortalCompanyLogo/3246d463-d005-4125-b2a1-7133452a5b30.png -->
+                    <img src="img/dealls.png" class="img-fluid sponsor-logo" alt="Dealls" />
+                </div>
+                <div class="col-6 col-md-3">
+                    <!-- Image Source : https://employers.hireclick.com/wp-content/uploads/2023/02/indeed-logo.webp -->
+                    <img src="img/indeed.png" class="img-fluid sponsor-logo" alt="Indeed" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="top">
+            <div class="footer-text">
+                <h2>Kanvasara</h2>
+                <p>
+                    Gimana nih, seru banget kan setelah eksplorasi karya pelukis Nusantara? Setiap goresan kuas mereka
+                    punya
+                    cerita unik yang bikin kita makin bangga sama kekayaan seni Indonesia. Yuk, dukung dan lestarikan
+                    karya-karya
+                    luar biasa ini!
+                </p>
+            </div>
+            <div class="footer-image">
+                <!-- Image source: https://sarasvati.co.id/en/auction/12/10-lukisan-kontemporer-indonesia-termahal-sepanjang-masa/10/ -->
+                <img src="images/koleksi/landing-art1.png" alt="Logo" />
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="footer-kontak">
+                <h3>Kontak</h3>
+                <div>
+                    <a href="#" class="link">+62 123 456 789</a>
+                    <a href="mailto:support@kanvasara.com" class="link">support@kanvasara.com</a>
+                </div>
+            </div>
+            <div class="footer-sosmed">
+                <h3>Media Sosial</h3>
+                <div>
+                    <a href="#" class="link"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="link"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="link"><i class="bx bxl-youtube"></i></a>
+                    <a href="#" class="link"><i class="bx bxl-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <h3>Navigasi</h3>
+                <div>
+                    <a href="#tentang-kami" class="link">
+                        <button class="btn-nav">
+                            Tentang <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </a>
+                    <a href="game.html" class="link">
+                        <button class="btn-nav">
+                            Permainan <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </a>
+                    <a href="#informasi" class="link">
+                        <button class="btn-nav">
+                            Informasi <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </a>
+                    <a href="#koleksi" class="link">
+                        <button class="btn-nav">
+                            Koleksi <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <script src="js/main.js"></script>
 </body>
+
 </html>
