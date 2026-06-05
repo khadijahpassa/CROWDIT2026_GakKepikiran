@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentora</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/webinar.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/logo-mentora.svg" type="image/x-icon" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg floating-navbar">
+      <div class="container">
+
+          <!-- Logo -->
+          <a class="navbar-brand" href="/">
+              <img src="img/logo-mentora.svg" alt="Mentora" class="logo">
+              Mentora
+          </a>
+
+          <!-- Mobile Toggle -->
+          <button
+              class="navbar-toggler border-0 shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar"
+          >
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menu -->
+          <div class="collapse navbar-collapse" id="mainNavbar">
+
+              <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="cv-builder.html">CV Builder</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="quiz.html">
+                          AI Interview
+                      </a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="interest-test.html">
+                          Tes Minat
+                      </a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link active" href="webinar.html">
+                          Webinar
+                      </a>
+                  </li>
+
+              </ul>
+
+              <div class="navbar-action">
+                  <a href="#" class="btn btn-register">
+                      Daftar Sekarang
+                  </a>
+              </div>
+
+          </div>
+      </div>
+  </nav>
+
+
+  <!-- SECTION ACARA MENDATANG -->
+  <section id="acara" class="py-4 py-lg-5">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">ACARA MENDATANG</h2>
+
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="event-card shadow-sm">
+            <!-- https://www.ruangkerja.id/office-hour/learning-development -->
+            <img src="img/webinar-1.png" class="card-img-top" alt="event" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold pb-2">
+                Learning Development: The Key Steps of Training Needs Analysis
+              </h5>
+              <p class="card-text">
+                Pelajari bagaimana peran HR mempengaruhi kesuksesan perusahaan
+                dan strategi bisnis.
+              </p>
+
+              <!-- Event Info -->
+              <div class="event-info d-flex align-items-center mb-3">
+                <i class="bx bx-calendar me-2"></i>
+                <span class="card-text">1 Oktober 2025</span>
+                <span class="mx-2 card-text">|</span>
+                <i class="bx bx-time-five me-2"></i>
+                <span class="card-text">19:00 - 20:00 WIB</span>
+              </div>
+
+              <a href="#" class="btn btn-dark w-100 open-booking-modal" data-bs-toggle="modal"
+                data-bs-target="#bookingModal"
+                data-title="Learning Development: The Key Steps of Training Needs Analysis">
+                Booking
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="event-card shadow-sm">
+            <!-- https://www.ruangkerja.id/office-hour/hr-organization-development -->
+            <img src="img/webinar-2.png" class="card-img-top" alt="event" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold pb-2">
+                Mengenal Lebih Jauh Peran HR dalam Perusahaan
+              </h5>
+              <p class="card-text">
+                Pelajari bagaimana peran HR mempengaruhi kesuksesan perusahaan
+                dan strategi bisnis.
+              </p>
+
+              <!-- Event Info -->
+              <div class="event-info d-flex align-items-center mb-3">
+                <i class="bx bx-calendar me-2"></i>
+                <span class="card-text">1 Oktober 2025</span>
+                <span class="mx-2 card-text">|</span>
+                <i class="bx bx-time-five me-2"></i>
+                <span class="card-text">19:00 - 20:00 WIB</span>
+              </div>
+
+              <a href="#" class="btn btn-dark w-100 open-booking-modal" data-bs-toggle="modal"
+                data-bs-target="#bookingModal" data-title="Mengenal Lebih Jauh Peran HR dalam Perusahaan">
+                Booking
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="event-card shadow-sm">
+            <!-- https://www.ruangkerja.id/office-hour/career-planning -->
+            <img src="img/webinar-3.png" class="card-img-top" alt="event" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold pb-2">
+                Career Planning: Getting Fit for Today, Ready for Tomorrow
+              </h5>
+              <p class="card-text">
+                Pelajari bagaimana peran HR mempengaruhi kesuksesan perusahaan
+                dan strategi bisnis.
+              </p>
+
+              <!-- Event Info -->
+              <div class="event-info d-flex align-items-center mb-3">
+                <i class="bx bx-calendar me-2"></i>
+                <span class="card-text">1 Oktober 2025</span>
+                <span class="mx-2 card-text">|</span>
+                <i class="bx bx-time-five me-2"></i>
+                <span class="card-text">19:00 - 20:00 WIB</span>
+              </div>
+
+              <a href="#" class="btn btn-dark w-100 open-booking-modal" data-bs-toggle="modal"
+                data-bs-target="#bookingModal" data-title="Career Planning: Getting Fit for Today, Ready for Tomorrow">
+                Booking
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="event-card shadow-sm">
+            <!-- https://www.ruangkerja.id/office-hour/escalate-career-through-online-presence -->
+            <img src="img/webinar-4.png" class="card-img-top" alt="event" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold pb-2">
+                LinkedIn: How to Escalate Your Career through Online Presence
+              </h5>
+              <p class="card-text">
+                Pelajari bagaimana peran HR mempengaruhi kesuksesan perusahaan
+                dan strategi bisnis.
+              </p>
+
+              <!-- Event Info -->
+              <div class="event-info d-flex align-items-center mb-3">
+                <i class="bx bx-calendar me-2"></i>
+                <span class="card-text">1 Oktober 2025</span>
+                <span class="mx-2 card-text">|</span>
+                <i class="bx bx-time-five me-2"></i>
+                <span class="card-text">19:00 - 20:00 WIB</span>
+              </div>
+
+              <a href="#" class="btn btn-dark w-100 open-booking-modal" data-bs-toggle="modal"
+                data-bs-target="#bookingModal"
+                data-title="LinkedIn: How to Escalate Your Career through Online Presence">
+                Booking
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="event-card shadow-sm">
+            <!-- https://www.ruangkerja.id/office-hour/hr-transformation-through-data-analytics -->
+            <img src="img/webinar-5.png" class="card-img-top" alt="event" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold pb-2">
+                HR Transformation through Data Analytics
+              </h5>
+              <p class="card-text">
+                Pelajari bagaimana peran HR mempengaruhi kesuksesan perusahaan
+                dan strategi bisnis.
+              </p>
+
+              <!-- Event Info -->
+              <div class="event-info d-flex align-items-center mb-3">
+                <i class="bx bx-calendar me-2"></i>
+                <span class="card-text">1 Oktober 2025</span>
+                <span class="mx-2 card-text">|</span>
+                <i class="bx bx-time-five me-2"></i>
+                <span class="card-text">19:00 - 20:00 WIB</span>
+              </div>
+
+              <a href="#" class="btn btn-dark w-100 open-booking-modal" data-bs-toggle="modal"
+                data-bs-target="#bookingModal" data-title="HR Transformation through Data Analytics">
+                Booking
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="event-card shadow-sm">
+            <!-- https://www.ruangkerja.id/office-hour/strengthening-hr-face-competitiveness-future-business -->
+            <img src="img/webinar-6.png" class="card-img-top" alt="event" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold pb-2">
+                Strengthening HR to Face Competitiveness in Future of Business
+              </h5>
+              <p class="card-text">
+                Pelajari bagaimana peran HR mempengaruhi kesuksesan perusahaan
+                dan strategi bisnis.
+              </p>
+
+              <!-- Event Info -->
+              <div class="event-info d-flex align-items-center mb-3">
+                <i class="bx bx-calendar me-2"></i>
+                <span class="card-text">1 Oktober 2025</span>
+                <span class="mx-2 card-text">|</span>
+                <i class="bx bx-time-five me-2"></i>
+                <span class="card-text">19:00 - 20:00 WIB</span>
+              </div>
+
+              <a href="#" class="btn btn-dark w-100 open-booking-modal" data-bs-toggle="modal"
+                data-bs-target="#bookingModal"
+                data-title="Strengthening HR to Face Competitiveness in Future of Business">
+                Booking
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Daftar -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="bookingModalLabel">
+              Daftar untuk Webinar
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="bookingForm">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" required />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">No. Telepon</label>
+                <input type="tel" class="form-control" id="phone" required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <button type="submit" class="btn btn-dark w-100" style="background-color: #7560E2; border: none">
+                Daftar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Sukses -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+          <div class="modal-body p-4">
+            <h5 class="mb-3">🎉 Pendaftaran Berhasil!</h5>
+            <p>Terima kasih, kamu sudah terdaftar untuk webinar ini.</p>
+            <button type="button" class="btn btn-dark w-100" style="background-color: #7560E2; border: none"
+              data-bs-dismiss="modal">
+              Oke
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const modal = document.getElementById("bookingModal");
+      modal.addEventListener("show.bs.modal", function (event) {
+        const button = event.relatedTarget;
+        const title = button.getAttribute("data-title");
+        const modalTitle = modal.querySelector(".modal-title");
+        modalTitle.textContent = `Daftar untuk Webinar "${title}"`;
+      });
+    });
+
+    // Modal Sukses
+    document
+      .getElementById("bookingForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const bookingModal = bootstrap.Modal.getInstance(
+          document.getElementById("bookingModal")
+        );
+        bookingModal.hide();
+
+        const successModal = new bootstrap.Modal(
+          document.getElementById("successModal")
+        );
+        successModal.show();
+
+        this.reset();
+      });
+  </script>
+</body>
+
+</html>

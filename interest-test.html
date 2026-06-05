@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentora</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/interest-test.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/logo-mentora.svg" type="image/x-icon" />
+
+</head>
+<body>
+    <!-- Intro -->
+    <section id="intro" class="hero">
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg floating-navbar">
+    <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="/">
+            <img src="img/logo-mentora.svg" alt="Mentora" class="logo">
+            Mentora
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="cv-builder.html">CV Builder</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="quiz.html">
+                        AI Interview
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="interest-test.html">
+                        Tes Minat
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="webinar.html">
+                        Webinar
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="navbar-action">
+                <a href="#" class="btn btn-register">
+                    Daftar Sekarang
+                </a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+      <h1 class="title">Cari Minatmu!</h1>
+      <p>
+        Siap Kerja dan Bersaing Sejak Lulus Sekolah! <br/>
+        Jelajahi peluang karier sesuai minat dan bakatmu, mulai langkah pertamamu hari ini.
+      </p>
+
+      <div id="startQuiz" class="btn">
+        <button id="startBtn">
+          <div class="svg-wrapper-1">
+            <div class="svg-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 84 84"
+                fill="none"
+              >
+                <path
+                  opacity="0.9"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M42 84C65.196 84 84 65.196 84 42C84 18.804 65.196 0 42 0C18.804 0 0 18.804 0 42C0 65.196 18.804 84 42 84ZM54.2469 33.9517L43.6046 27.6558C39.3856 25.1598 37.2761 23.9119 35.5452 24.0048C33.6747 24.1053 31.9642 25.1172 30.944 26.7269C30 28.2164 30 30.7123 30 35.7041V48.2959C30 53.2877 30 55.7836 30.944 57.2731C31.9642 58.8828 33.6747 59.8947 35.5452 59.9952C37.2761 60.0881 39.3856 58.8402 43.6046 56.3442L54.2469 50.0484C58.4658 47.5524 60.5753 46.3045 61.3622 44.722C62.2126 43.0119 62.2126 40.9881 61.3622 39.278C60.5753 37.6955 58.4659 36.4476 54.2469 33.9517Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>
+          <span id="btnText">Mulai Sekarang</span>
+        </button>
+      </div>
+
+      <img src="img/building-left.png" class="building-left" />
+      <img src="img/building-right.png" class="building-right" />
+      <img src="img/white-cloud.png" class="bawah-section" />
+    </section>
+
+    <!-- Quiz -->
+    <div id="quiz" class="d-none text-center">
+      <div class="mb-4">
+        <!-- Progress Bar -->
+        <div
+          class="progress"
+          style="height: 20px; background: #cfccf6; border-radius: 20px"
+        >
+          <div
+            id="quizProgress"
+            class="progress-bar"
+            style="width: 0%; background: #7560E2; border-radius: 20px"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Question -->
+      <h4 id="questionText" class="fw-bold mb-4"></h4>
+
+      <!-- Answers -->
+      <div id="answerOptions" class="d-grid gap-3"></div>
+      <img src="img/white-cloud.png" class="bawah-section" />
+    </div>
+
+    <!-- Result -->
+    <div id="result" class="text-center d-none">
+        <div class="card-body">
+            <h5 class="pb-3">Selamat, kamu telah menyelesaikan tes minatmu!</h5>
+            <button id="seeResult">Lihat Hasil</button>
+        </div>
+        <img src="img/white-cloud.png" class="bawah-section" />
+    </div>
+
+    <!-- Job Result -->
+    <div id="jobResult" class="d-none">
+      <div class="card-body text-center">
+        <div class="job-image">
+           <img id="jobImage" src="" alt="Job Image" />
+        </div>
+        <h5 id="jobTitle">Digital Marketing</h5>
+        <p id="jobDesc">Deskripsi Job</p>
+        <button id="backHome">Kembali ke Beranda</button>
+      </div>
+      <img src="img/white-cloud.png" class="bawah-section" />
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/interest-test.js"></script>
+
+  </body>
+</html>

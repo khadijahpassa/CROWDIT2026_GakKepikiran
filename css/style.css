@@ -80,7 +80,7 @@ h1, h2, h3, h4, .heading-font {
 }
 
 .nav-link.active {
-    color: var(--primary-color);
+    color: var(--primary-color)!important;;
 }
 
 .btn-register {
