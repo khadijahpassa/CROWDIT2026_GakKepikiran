@@ -1068,3 +1068,344 @@ h4,
     color: var(--primary-color);
     font-weight: bold;
 }
+
+/* BANNER CV */
+.cv-section {
+    position: relative;
+    width: 100%;
+    max-width: 1249px;
+    height: 546px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    color: var(--white);
+    background-image: url("../img/background-cv.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cv-title {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.cv-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+    padding: 8px 8px 8px 24px;
+    background: #fff;
+    border-radius: 999px;
+    color: #1a1a2e;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.btn-white:hover {
+    color: #1a1a2e;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.btn-arrow {
+    width: 42px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 18px;
+    border-radius: 20px;
+    background: #7c5cf6;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.btn-white:hover .btn-arrow {
+    background: #6545ee;
+}
+
+.btn-white:hover .btn-arrow i,
+.btn-white:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+/* MEDIA QUERY */
+@media (min-width: 1024px) {
+    .cv-section {
+        background-position: left center;
+        min-height: 400px;
+    }
+
+    .cv-section h1 {
+        font-size: 2.8rem;
+    }
+
+    .cv-description {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cv-section {
+        background-position: right bottom;
+        background-size: cover;
+        text-align: center;
+    }
+
+    .cv-title {
+        font-size: 1.8rem !important;
+    }
+
+    .cv-description {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cv-section {
+        background-position: left bottom;
+    }
+}
+
+/* =========================
+   FOOTER MENTORA (KANVASARA STYLE)
+========================= */
+
+footer {
+  padding: 4rem;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    #f8fafc 0%,
+    #f8fafc 40%,
+    var(--primary-color) 40%,
+    var(--primary-color) 100%
+  );
+}
+
+/* =========================
+   TOP SECTION
+========================= */
+
+footer .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+
+  background: #ffffff;
+  padding: 3rem 4rem;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+footer .top .footer-text {
+  width: 100%;
+}
+
+footer .top .footer-text h2 {
+  font-family: var(--font-heading);
+  font-size: 62px;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+footer .top p {
+  font-weight: 400;
+  width: 85%;
+  opacity: 0.75;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* IMAGE */
+footer .top .footer-image {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+footer .top .footer-image img {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 14px;
+}
+
+/* =========================
+   BOTTOM SECTION
+========================= */
+
+footer .bottom {
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  color: white;
+}
+
+footer .bottom h3 {
+  color: white;
+  padding: 28px 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* =========================
+   LINKS (NO UNDERLINE FIX)
+========================= */
+
+footer a {
+  text-decoration: none;
+}
+
+/* CONTACT LINKS */
+footer .footer-kontak a {
+  color: rgba(255, 255, 255, 0.85);
+  display: block;
+  padding-bottom: 6px;
+  transition: 0.3s ease;
+}
+
+footer .footer-kontak a:hover {
+  color: #ffffff;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+footer .footer-sosmed div {
+  display: flex;
+  gap: 12px;
+}
+
+footer .footer-sosmed div a {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  font-size: 22px;
+
+  transition: all 0.3s ease;
+}
+
+footer .footer-sosmed div a:hover {
+  background: #ffffff;
+  color: var(--primary-color);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* =========================
+   NAVIGATION BUTTONS
+========================= */
+
+footer .footer-nav {
+  display: flex;
+  gap: 22px;
+}
+
+footer .footer-nav div {
+  padding: 28px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+footer .btn-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 1.5rem 1rem;
+
+  background: #ffffff;
+  border-radius: 16px;
+  border: none;
+
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+footer .btn-nav i {
+  font-size: 24px;
+  transform: rotate(-40deg);
+  color: var(--primary-color);
+  transition: 0.3s ease;
+}
+
+footer .btn-nav:hover {
+  transform: translateY(-3px);
+}
+
+footer .btn-nav:hover i {
+  transform: rotate(40deg) translateX(4px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  footer {
+    padding: 2.5rem;
+  }
+
+  footer .top {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  footer .top p {
+    width: 100%;
+  }
+
+  footer .top .footer-image {
+    justify-content: center;
+  }
+
+  footer .top .footer-image img {
+    width: 100%;
+  }
+
+  footer .bottom {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  footer .footer-nav div {
+    grid-template-columns: 1fr;
+  }
+}
