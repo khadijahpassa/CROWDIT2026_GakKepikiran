@@ -26,10 +26,7 @@
 body{
     min-height:100vh;
 
-    display:flex;
-    justify-content:center;
-
-    padding:24px;
+    padding:40px 20px;
 
     font-family:var(--font-main);
     color:var(--text-dark);
@@ -40,40 +37,41 @@ body{
         var(--primary-light)
     );
 
-    position:relative;
-
     overflow-y:auto;
     overflow-x:hidden;
+
+    position:relative;
 }
 /* =========================
    BACKGROUND SHAPES
 ========================= */
 
 .bg-shape{
-    position:absolute;
+    position:fixed;
     border-radius:50%;
     background:rgba(255,255,255,.08);
     pointer-events:none;
+    z-index:0;
 }
 
 .shape-1{
-    width:450px;
-    height:450px;
-    top:-180px;
-    left:-180px;
+    width:600px;
+    height:600px;
+    top:-250px;
+    left:-250px;
 }
 
 .shape-2{
-    width:250px;
-    height:250px;
+    width:400px;
+    height:400px;
     top:80px;
-    right:-80px;
+    right:-150px;
 }
 
 .shape-3{
-    width:380px;
-    height:380px;
-    bottom:-180px;
+    width:500px;
+    height:500px;
+    bottom:-250px;
     left:50%;
     transform:translateX(-50%);
 }
@@ -84,7 +82,9 @@ body{
 
 .wrapper{
     width:100%;
-    max-width:800px;
+    max-width:900px;
+    margin:auto;
+
     position:relative;
     z-index:2;
 }
@@ -93,10 +93,11 @@ body{
     background:var(--white);
 
     border-radius:36px;
-    padding:40px;
+
+    padding:48px;
 
     box-shadow:
-        0 30px 80px rgba(0,0,0,.15);
+        0 25px 80px rgba(0,0,0,.15);
 }
 
 /* =========================
@@ -140,27 +141,37 @@ body{
 ========================= */
 
 .score-box{
+    background:linear-gradient(
+        135deg,
+        rgba(117,96,226,.12),
+        rgba(142,133,243,.18)
+    );
+
+    border-radius:30px;
+
+    padding:35px;
+
     text-align:center;
+
     margin-bottom:35px;
 }
 
 .score-number{
-    font-size:80px;
+    font-size:96px;
     font-weight:800;
 
     color:var(--primary-color);
 
     line-height:1;
-
-    transform:scale(.8);
-
-    animation:
-        scorePop .8s ease forwards;
 }
 
 .score-label{
+    font-size:16px;
     font-weight:700;
+
     color:var(--text-muted);
+
+    margin-top:8px;
 }
 
 /* =========================
@@ -179,6 +190,16 @@ body{
     margin-bottom:8px;
 
     color:var(--text-dark);
+}
+
+.metrics-card{
+    background:#F8F8FC;
+
+    padding:24px;
+
+    border-radius:24px;
+
+    margin-bottom:25px;
 }
 
 .progress{
@@ -309,6 +330,107 @@ body{
 }
 
 /* =========================
+   NEW RESULT UI
+========================= */
+
+.candidate-badge{
+    width:fit-content;
+
+    margin:0 auto 24px;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:12px 18px;
+
+    border-radius:999px;
+
+    background:#EAFBF1;
+
+    color:#16A34A;
+
+    font-weight:700;
+}
+
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:24px;
+}
+
+.section-header h5{
+    margin:0;
+    font-weight:800;
+    color:var(--text-dark);
+}
+
+.section-header i{
+    font-size:22px;
+    color:var(--primary-color);
+}
+
+.score-box{
+    background:linear-gradient(
+        135deg,
+        rgba(117,96,226,.12),
+        rgba(142,133,243,.20)
+    );
+
+    border-radius:32px;
+
+    padding:40px;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    border:1px solid rgba(117,96,226,.08);
+}
+
+.metrics-card{
+    background:#F8F8FC;
+
+    padding:28px;
+
+    border-radius:28px;
+
+    margin-bottom:24px;
+
+    border:1px solid #ECEFF5;
+}
+
+.recommendation-box{
+    background:#F8F8FC;
+
+    padding:28px;
+
+    border-radius:28px;
+
+    margin-top:0;
+
+    border:1px solid #ECEFF5;
+}
+
+.recommendation-box li{
+    padding:12px 0;
+
+    color:var(--text-muted);
+
+    border-bottom:1px solid #ECEFF5;
+}
+
+.recommendation-box li:last-child{
+    border:none;
+}
+
+.metric:last-child{
+    margin-bottom:0;
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 
@@ -359,6 +481,7 @@ body{
         font-size:14px;
     }
 }
+
 
 @keyframes shimmer{
 

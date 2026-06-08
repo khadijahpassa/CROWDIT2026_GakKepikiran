@@ -5,17 +5,17 @@ const level =
     localStorage.getItem("level");
 
 document.getElementById("selectedPosition").innerHTML =
-    `💼 ${position}`;
+    `<i class="bi bi-briefcase-fill"></i> ${position}`;
 
 document.getElementById("selectedLevel").innerHTML =
-    `📈 ${level}`;
+    `<i class="bi bi-stars"></i> ${level}`;
 
 const frontendQuestions = [
-  "Tell me about a challenging project you worked on.",
-  "How do you handle tight deadlines?",
-  "Describe a conflict within a team and how you resolved it.",
-  "How do you prioritize tasks?",
-  "Where do you see yourself in 5 years?"
+    "Tell me about a challenging project you worked on.",
+    "How do you handle tight deadlines?",
+    "Describe a conflict within a team and how you resolved it.",
+    "How do you prioritize tasks?",
+    "Where do you see yourself in 5 years?"
 ];
 
 const backendQuestions = [
@@ -58,6 +58,9 @@ const statusEl =
 questionEl.innerText =
     questions[currentQuestion];
 
+statusEl.innerHTML =
+    `<i class="bi bi-check-circle-fill"></i> Ready for interview`;
+
 let recognition;
 
 if ("webkitSpeechRecognition" in window) {
@@ -89,14 +92,20 @@ if ("webkitSpeechRecognition" in window) {
     };
 
     recognition.onstart = () => {
-        statusEl.innerText =
-            "🎤 Listening...";
-    };
 
-    recognition.onend = () => {
-        statusEl.innerText =
-            "⏹ Recording stopped";
-    };
+    statusEl.classList.remove("text-danger");
+
+    statusEl.innerHTML =
+        `<i class="bi bi-mic-fill"></i> Listening...`;
+};
+
+recognition.onend = () => {
+
+    statusEl.classList.remove("text-danger");
+
+    statusEl.innerHTML =
+        `<i class="bi bi-stop-circle-fill"></i> Recording stopped`;
+};
 }
 
 let mediaRecorder;
@@ -123,16 +132,21 @@ async function startInterview() {
 
     mediaRecorder.onstop = () => {
 
-        const blob =
-            new Blob(audioChunks, {
-                type: "audio/webm"
-            });
+    const blob =
+        new Blob(audioChunks, {
+            type: "audio/webm"
+        });
 
-        document
-            .getElementById("player")
-            .src =
-            URL.createObjectURL(blob);
-    };
+    document
+        .getElementById("player")
+        .src =
+        URL.createObjectURL(blob);
+
+    statusEl.classList.remove("text-danger");
+
+    statusEl.innerHTML =
+        `<i class="bi bi-cloud-check-fill"></i> Answer recorded successfully`;
+};
 
     mediaRecorder.start();
 }
@@ -148,23 +162,55 @@ function stopInterview() {
 
 function nextQuestion() {
 
+    const answer =
+        transcriptEl.innerText.trim();
+
+    if (
+        answer === "" ||
+        answer === "Start speaking and your answer will appear here..."
+    ) {
+
+        statusEl.classList.add("text-danger");
+
+        statusEl.innerHTML =
+            `<i class="bi bi-exclamation-triangle-fill"></i> Please answer this question before continuing`;
+
+        return;
+    }
+
+    const wordCount =
+        answer.split(/\s+/).length;
+
+    if (wordCount < 5) {
+
+        statusEl.classList.add("text-danger");
+
+        statusEl.innerHTML =
+            `<i class="bi bi-exclamation-triangle-fill"></i> Please provide a more complete answer`;
+
+        return;
+    }
+
+    statusEl.classList.remove("text-danger");
+
     currentQuestion++;
 
-   if (
-    currentQuestion >=
-    questions.length
-) {
+    if (
+        currentQuestion >=
+        questions.length
+    ) {
 
-    localStorage.setItem(
-        "interviewScore",
-        85
-    );
+        localStorage.setItem(
+            "interviewScore",
+            85
+        );
 
-    window.location.href =
-        "result.html";
+        window.location.href =
+            "result.html";
 
-    return;
-}
+        return;
+    }
+
     questionEl.innerText =
         questions[currentQuestion];
 
@@ -174,4 +220,7 @@ function nextQuestion() {
     document
         .getElementById("player")
         .src = "";
+
+    statusEl.innerHTML =
+        `<i class="bi bi-arrow-repeat"></i> Ready for next question`;
 }
