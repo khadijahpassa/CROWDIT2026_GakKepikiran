@@ -2,20 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Sora:wght@600;700;800&display=swap');
 
 :root {
-    --primary-color: #7560E2;
-    /* Ungu utama */
-    --primary-light: #8E85F3;
-    /* Versi lebih terang untuk hover */
-    --secondary-color: #4BB3E9;
-    /* Biru cyan */
-    --bg-light: #ECFAFD;
-    /* Background  */
-    --text-dark: #1E1E1E;
-    /* Warna font heading/hitam */
-    --text-muted: #64748B;
-    /* Warna font deskripsi/abu */
+    --primary-color: #7560E2;    /* Ungu utama */
+    --primary-light: #8E85F3;    /* Versi lebih terang untuk hover */
+    --secondary-color: #4BB3E9;  /* Biru cyan */
+    --bg-light: #ECFAFD;        /* Background  */
+    --text-dark: #1E1E1E;       /* Warna font heading/hitam */
+    --text-muted: #64748B;      /* Warna font deskripsi/abu */
     --white: #FFFFFF;
-
     /* Typography */
     --font-main: 'Plus Jakarta Sans', sans-serif;
     --font-heading: 'Sora', sans-serif;
@@ -34,33 +27,23 @@ body {
     background-color: var(--white);
 }
 
-h1,
-h2,
-h3,
-h4,
+h1, h2, h3, h4,
 .heading-font {
-    font-family: var(--font-heading);
+  font-family: var(--font-heading);
 }
 
 /* NAVBAR */
-
 .floating-navbar {
     position: fixed;
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
-
     width: 100%;
     max-width: 1100px;
-
     background: #fff;
     border-radius: 999px;
-
     padding: 10px 20px;
-
-    box-shadow:
-        0 10px 35px rgba(0, 0, 0, 0.06);
-
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
     z-index: 999;
 }
 
@@ -100,11 +83,9 @@ h4,
     background: var(--primary-color);
     color: white;
     border-radius: 999px;
-
     padding: 14px 28px;
     font-size: 15px;
     font-weight: 600;
-
     text-decoration: none;
     transition: .2s;
 }
@@ -119,11 +100,9 @@ h4,
 }
 
 /* HERO */
-
 .hero-section {
     position: relative;
     overflow: hidden;
-
     background:
         linear-gradient(to bottom,
             #F5F6FA 0%,
@@ -161,7 +140,6 @@ h4,
 .hero-content p {
     max-width: 650px;
     margin: auto;
-
     color: var(--text-muted);
     font-size: 16px;
     line-height: 1.8;
@@ -207,7 +185,6 @@ h4,
 
 .hero-gallery {
     margin-top: 10px;
-
     display: flex;
     justify-content: center;
     align-items: end;
@@ -219,7 +196,6 @@ h4,
     height: 360px;
     border-radius: 40px;
     overflow: hidden;
-
     display: flex;
     align-items: end;
 }
@@ -494,8 +470,7 @@ h4,
 .phone-content {
     position: relative;
     width: 55%;
-    aspect-ratio: 9 / 19.5;
-    /* rasio frame HP real */
+    aspect-ratio: 9 / 19.5; /* rasio frame HP real */
     z-index: 2;
 }
 
@@ -597,7 +572,6 @@ h4,
     transform: translate(-50%, -50%) rotate(360deg);
     opacity: 1;
 }
-
 
 @media (max-width: 1024px) {
 
@@ -1139,7 +1113,7 @@ h4,
     transform: translateX(4px);
 }
 
-/* MEDIA QUERY */
+/* MEDIA QUERY BANNER CV */
 @media (min-width: 1024px) {
     .cv-section {
         background-position: left center;
@@ -1326,7 +1300,6 @@ footer .btn-nav {
   font-weight: 700;
 
   cursor: pointer;
-
   transition: all 0.3s ease;
 }
 
@@ -1345,7 +1318,7 @@ footer .btn-nav:hover i {
   transform: rotate(40deg) translateX(4px);
 }
 
-/* Media Queries */
+/* MEDIA QUERY FOOTER */
 @media (max-width: 1120px) and (min-width: 1020px) {
   footer .bottom {
     display: flex;
