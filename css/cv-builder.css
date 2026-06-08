@@ -21,6 +21,13 @@
   --font-heading: 'Sora', sans-serif;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-main);
   color: var(--text-dark);
@@ -35,88 +42,106 @@ h4,
   font-family: var(--font-heading);
 }
 
-/* Utilitas tambahan biar gampang dipanggil di HTML */
-/* contoh: <h1 class="text-primary-custom"> */
-.text-primary-custom {
-  color: var(--primary-color);
-}
-
-.bg-primary-custom {
-  background-color: var(--primary-color);
-}
-
 /* NAVBAR */
 
 .floating-navbar {
-  position: fixed;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
 
-  width: 100%;
-  max-width: 1100px;
-  border-radius: 999px;
+    width: 100%;
+    max-width: 1100px;
 
-  padding: 10px 20px;
+    background: #fff;
+    border-radius: 999px;
 
-  box-shadow:
-    0 10px 35px rgba(0, 0, 0, 0.06);
+    padding: 10px 20px;
 
-  z-index: 999;
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.06);
+
+    z-index: 999;
 }
 
 .logo {
-  height: 42px;
-  width: auto;
+    height: 42px;
+    width: auto;
 }
 
 .navbar-nav {
-  gap: 8px;
+    gap: 8px;
 }
 
-.navbar-brand {
-  color: var(--primary-color);
-  font-weight: 600;
-  transition: all 300ms ease;
+.navbar-brand{
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: all 300ms ease;
 }
 
 .nav-link {
-  color: #1E1E1E;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 8px 14px !important;
-  transition: .2s;
+    color: #1E1E1E;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 14px !important;
+    transition: .2s;
 }
 
 .nav-link:hover {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .nav-link.active {
-  color: var(--primary-color) !important;
-  ;
+    color: var(--primary-color)!important;
 }
 
 .btn-register {
-  background: var(--primary-color);
-  color: white;
-  border-radius: 999px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 999px;
 
-  padding: 14px 28px;
-  font-size: 15px;
-  font-weight: 600;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 600;
 
-  text-decoration: none;
-  transition: .2s;
+    text-decoration: none;
+    transition: .2s;
 }
 
 .btn-register:hover {
-  background: var(--primary-light);
-  color: white;
+    background: var(--primary-light);
+    color: white;
 }
 
 .navbar-toggler {
-  padding: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+
+    .floating-navbar {
+        top: 12px;
+        width: calc(100% - 20px);
+        border-radius: 20px;
+        padding: 12px 16px;
+    }
+
+    .navbar-collapse {
+        padding-top: 16px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        gap: 4px;
+    }
+
+    .navbar-action {
+        margin-top: 12px;
+    }
+
+    .btn-register {
+        width: 100%;
+    }
 }
 
 /* CV BUILDER */
@@ -124,7 +149,7 @@ h4,
   display: flex;
   width: 100%;
   min-height: 100vh;
-  padding: 8em 3em;
+  padding: 4em 3em 6em;
 }
 
 .cv-form-container {
@@ -311,8 +336,8 @@ h4,
 }
 
 .btn-export {
-  background-color: #FEB736;
-  font-size: 16px;
+  background-color: var(--secondary-color);
+  font-size: 15px;
   color: var(--white);
   font-weight: 500;
   border-radius: 8px;
@@ -322,13 +347,14 @@ h4,
 }
 
 .btn-export:hover {
-  background-color: #eeaa16;
+  background-color: #6acbff;
+  color: var(--white);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.127);
   transform: translateY(-2px);
 }
 
 @media (max-width: 480px) {
   .cv-builder-container {
-    padding: 8em 2em;
+    padding: 1.5em 2em;
   }
 }
