@@ -12,24 +12,18 @@ const frontendQuestions = [
   "Ceritakan proyek paling menantang yang pernah kamu kerjakan.",
   "Bagaimana cara kamu menghadapi deadline yang ketat?",
   "Pernah mengalami konflik dalam tim? Bagaimana cara kamu menyelesaikannya?",
-  "Bagaimana cara kamu menentukan prioritas pekerjaan?",
-  "Di mana kamu melihat dirimu dalam 5 tahun ke depan?",
 ];
 
 const backendQuestions = [
   "Apa itu REST API?",
   "Apa itu JWT?",
   "Apa itu Middleware?",
-  "Apa perbedaan SQL dan NoSQL?",
-  "Apa fungsi HTTP Status Code?",
 ];
 
 const uiuxQuestions = [
   "Apa itu Design Thinking?",
   "Apa perbedaan UI dan UX?",
   "Bagaimana melakukan User Research?",
-  "Apa itu Wireframe?",
-  "Apa itu Design System?",
 ];
 
 let questions = frontendQuestions;

@@ -1,14 +1,10 @@
-/* =========================
-   GLOBAL
-========================= */
-
 :root {
-  --primary-color: #7560e2; 
-  --primary-light: #8e85f3; 
+  --primary-color: #7560e2;
+  --primary-light: #8e85f3;
   --secondary-color: #4bb3e9;
-  --bg-light: #ecfafd; 
-  --text-dark: #1e1e1e; 
-  --text-muted: #64748b; 
+  --bg-light: #ecfafd;
+  --text-dark: #1e1e1e;
+  --text-muted: #64748b;
   --white: #ffffff;
   --font-main: "Plus Jakarta Sans", sans-serif;
   --font-heading: "Sora", sans-serif;
@@ -478,7 +474,6 @@ body::before {
   opacity: 0.9;
 }
 
-
 .stats {
   display: flex;
   flex-wrap: wrap;
@@ -577,7 +572,7 @@ body::before {
   margin-bottom: 0;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   body {
     overflow: auto;
     padding: 20px;
@@ -585,19 +580,49 @@ body::before {
 
   .main-card {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "left"
+      "button";
+
     gap: 30px;
     padding: 30px;
   }
 
   .card-right {
-    order: -1;
-  }
-
-  .welcome-image {
-    max-width: 260px;
+    display: none;
   }
 
   .difficulty-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin-top: 90px;
+    padding: 0 10px;
+  }
+
+  .main-card {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .stat-pill {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .start-btn {
+    font-size: 16px;
+    height: 56px;
   }
 }
