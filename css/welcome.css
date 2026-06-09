@@ -3,58 +3,45 @@
 ========================= */
 
 :root {
-  --primary-color: #7560e2; /* Ungu utama */
-  --primary-light: #8e85f3; /* Versi lebih terang untuk hover */
-  --secondary-color: #4bb3e9; /* Biru cyan */
-  --bg-light: #ecfafd; /* Background  */
-  --text-dark: #1e1e1e; /* Warna font heading/hitam */
-  --text-muted: #64748b; /* Warna font deskripsi/abu */
+  --primary-color: #7560e2; 
+  --primary-light: #8e85f3; 
+  --secondary-color: #4bb3e9;
+  --bg-light: #ecfafd; 
+  --text-dark: #1e1e1e; 
+  --text-muted: #64748b; 
   --white: #ffffff;
-
-  /* Typography */
   --font-main: "Plus Jakarta Sans", sans-serif;
   --font-heading: "Sora", sans-serif;
 }
 
 body {
   font-family: var(--font-main);
-
   min-height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   overflow: hidden;
-
   background: linear-gradient(180deg, #ffffff 0%, #f8faff 35%, #edf5ff 100%);
-
   position: relative;
 }
 
 body::before {
   content: "";
-
   position: fixed;
-
   width: 900px;
   height: 900px;
-
   right: -350px;
   top: -350px;
-
   border-radius: 50%;
-
   background: radial-gradient(
     circle,
     rgba(117, 96, 226, 0.12),
     transparent 70%
   );
-
   pointer-events: none;
 }
-/* NAVBAR */
 
+/* NAVBAR */
 .floating-navbar {
   position: fixed;
   top: 40px;
@@ -229,9 +216,7 @@ body::before {
   }
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 .badge-top {
   display: inline-flex;
@@ -275,9 +260,7 @@ body::before {
   font-weight: 700;
 }
 
-/* =========================
-   LABEL
-========================= */
+/* LABEL */
 
 .section-label {
   display: block;
@@ -290,9 +273,7 @@ body::before {
   color: var(--text-dark);
 }
 
-/* =========================
-   DROPDOWN
-========================= */
+/* DROPDOWN */
 
 .dropdown {
   width: 100%;
@@ -360,9 +341,7 @@ body::before {
   color: var(--text-dark);
 }
 
-/* =========================
-   MENU
-========================= */
+/* MENU */
 
 .custom-menu {
   width: 100%;
@@ -433,9 +412,7 @@ body::before {
   }
 }
 
-/* =========================
-   DIFFICULTY
-========================= */
+/* LEVEL */
 
 .difficulty-grid {
   display: grid;
@@ -501,9 +478,6 @@ body::before {
   opacity: 0.9;
 }
 
-/* =========================
-   STATS
-========================= */
 
 .stats {
   display: flex;
@@ -535,9 +509,7 @@ body::before {
   color: var(--primary-color);
 }
 
-/* =========================
-   BUTTON
-========================= */
+/* BUTTON */
 
 .start-btn {
   grid-area: button;
@@ -604,9 +576,6 @@ body::before {
   max-width: 520px;
   margin-bottom: 0;
 }
-/* =========================
-   RESPONSIVE
-========================= */
 
 @media (max-width: 991px) {
   body {
