@@ -31,49 +31,44 @@ body{
     font-family:var(--font-main);
     color:var(--text-dark);
 
-    background:linear-gradient(
-        135deg,
-        var(--primary-color),
-        var(--primary-light)
-    );
+    background:
+        linear-gradient(
+            180deg,
+            #FFFFFF 0%,
+            #F8FAFF 45%,
+            #EEF4FF 100%
+        );
 
     overflow-y:auto;
     overflow-x:hidden;
 
     position:relative;
 }
-/* =========================
-   BACKGROUND SHAPES
-========================= */
 
-.bg-shape{
+
+body::before{
+    content:"";
+
     position:fixed;
+
+    width:900px;
+    height:900px;
+
+    top:-450px;
+    right:-350px;
+
     border-radius:50%;
-    background:rgba(255,255,255,.08);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(117,96,226,.10),
+            transparent 70%
+        );
+
     pointer-events:none;
+
     z-index:0;
-}
-
-.shape-1{
-    width:600px;
-    height:600px;
-    top:-250px;
-    left:-250px;
-}
-
-.shape-2{
-    width:400px;
-    height:400px;
-    top:80px;
-    right:-150px;
-}
-
-.shape-3{
-    width:500px;
-    height:500px;
-    bottom:-250px;
-    left:50%;
-    transform:translateX(-50%);
 }
 
 /* =========================
@@ -90,14 +85,17 @@ body{
 }
 
 .main-card{
-    background:var(--white);
+    background:#FFFFFF;
 
-    border-radius:36px;
+    border-radius:32px;
 
-    padding:48px;
+    padding:40px;
+
+    border:1px solid #F1F5F9;
 
     box-shadow:
-        0 25px 80px rgba(0,0,0,.15);
+        0 10px 30px rgba(15,23,42,.04),
+        0 25px 60px rgba(15,23,42,.08);
 }
 
 /* =========================
@@ -141,19 +139,22 @@ body{
 ========================= */
 
 .score-box{
-    background:linear-gradient(
-        135deg,
-        rgba(117,96,226,.12),
-        rgba(142,133,243,.18)
-    );
+    background:
+        linear-gradient(
+            135deg,
+            rgba(117,96,226,.08),
+            rgba(117,96,226,.03)
+        );
 
-    border-radius:30px;
+    border:1px solid rgba(117,96,226,.08);
 
-    padding:35px;
+    border-radius:24px;
+
+    padding:32px;
 
     text-align:center;
 
-    margin-bottom:35px;
+    margin-bottom:24px;
 }
 
 .score-number{
